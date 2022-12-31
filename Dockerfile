@@ -5,6 +5,6 @@ WORKDIR $HOME
 ADD . $HOME
 RUN mvn install
 
-FROM openjdk:11-jdk-alpine
+FROM openjdk:8-jdk-alpine
 EXPOSE 8080
 ENTRYPOINT ["java","jar","$HOME/target/simple-kubernates-1.0-SNAPSHOT.jar"]
